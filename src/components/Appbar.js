@@ -8,7 +8,7 @@ class Appbar extends React.Component {
 
                 <View>
                     <Text style={styles.appbarTitle}>
-                        TKC MEMO
+                        VALS MEMO
                     </Text>
                 </View>
             </View>
@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
     appbarTitle : {
         color : '#fff',
         fontSize : 18,
+        fontWeight : 'bold',
     },
 });
 
