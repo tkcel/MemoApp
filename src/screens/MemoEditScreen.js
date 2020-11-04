@@ -14,7 +14,7 @@ class MemoEditScreen extends React.Component {
                     multiline
 
                 />
-                <CircleButton>
+                <CircleButton onPress={()=>{this.props.navigation.goBack();}}>
                     <Icon name='check' color='#fff' size='22'/>
                 </CircleButton>
             </View>

@@ -1,18 +1,39 @@
 import React from 'react';
 import {StyleSheet, Text, View, TextInput, TouchableHighlight} from "react-native";
-import Icon from 'react-native-vector-icons/FontAwesome'
-import CircleButton from "../elements/CircleButton";
+
 
 class LoginScreen extends React.Component {
+    state = {
+        email : '',
+        password : '',
+    }
+
+    handleSubmit(){
+         // Login
+    }
+
     render() {
         return(
             <View style={styles.container}>
                 <Text style={styles.Title}>Login</Text>
-                <TextInput style={styles.input} value='Email Adress'/>
-                <TextInput style={styles.input} value='Password'/>
+                <TextInput style={styles.input} value={this.state.email}
+                           onChangeText={(text)=>{this.setState({email:text})}}
+                           autoCapitalize="none"
+                           autoCorrect={false}
+                           placeholder="Email Adders"
+                />
+                <TextInput style={styles.input} value={this.state.password}
+                           onChangeText={(text)=>{this.setState({password : text})}}
+                           autoCapitalize="none"
+                           autoCorrect={false}
+                           placeholder={"Password"}
+                           secureTextEntry
+
+                />
                 <TouchableHighlight
                     style={styles.Button}
-                    underlayColor='#ddd'
+                    underlayColor='#b318b5'
+                    onPress={this.handleSubmit.bind(this)}
                 >
                     <Text style={styles.buttonTitle}>
                         ログインする
