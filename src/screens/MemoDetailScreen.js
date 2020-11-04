@@ -24,7 +24,9 @@ class MemoDetailScreen extends React.Component{
                     </Text>
                 </View>
 
-                <CircleButton color="white" style={styles.editButton}>
+                <CircleButton color="white" style={styles.editButton}
+                              onPress={()=>{this.props.navigation.navigate('MemoEdit')}}
+                >
                     <Icon name="pencil" size={22} color='#ff52dc'/>
                 </CircleButton>
             </View>

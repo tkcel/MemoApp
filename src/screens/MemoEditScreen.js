@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         width : '100%',
     },
     MemoEditInput : {
-        backgroundColor : '#ddd',
+        backgroundColor : '#fff',
         flex: 1,
         paddingTop : 32,
         paddingLeft : 16,

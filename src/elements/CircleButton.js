@@ -1,12 +1,12 @@
 import React from 'react';
-import { StyleSheet, View, Text} from "react-native";
+import { StyleSheet, View, TouchableHighlight} from "react-native";
 // import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 class CircleButton extends React.Component{
 
     render() {
-        const {style, color} = this.props;
+        const {style, color, onPress} = this.props;
 
         let bgColor = '#ff52dc';
         let textColor = '#fff';
@@ -17,18 +17,27 @@ class CircleButton extends React.Component{
         }
 
         return(
-            <View style={[styles.circleButton, style, {backgroundColor: bgColor}]}>
-                {this.props.children}
-            </View>
+            <TouchableHighlight style={[styles.container, style]}
+                                onPress={onPress}
+                                underlayColor='transparent'
+            >
+                <View style={[styles.circleButton, {backgroundColor: bgColor}]}>
+                    {this.props.children}
+                </View>
+            </TouchableHighlight>
         );
     }
 }
 
 const styles = StyleSheet.create({
-    circleButton : {
+    container : {
+        width: 48,
+        height: 48,
         position : 'absolute',
         bottom : 32,
         right : 24,
+    },
+    circleButton : {
         width : 48,
         height : 48,
         borderRadius : 24,
